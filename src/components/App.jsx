@@ -7,9 +7,17 @@ import CreateArea from "./CreateArea";
 
 
 function App() {
+
+function addNote(note){
+    console.log(note)
+
+}
+
     return (<div>
         <Header />
-        <CreateArea />
+        <CreateArea 
+            onAdd={addNote}
+        />
         {notes.map(entry =>
             <Note
                 key={entry.key}
